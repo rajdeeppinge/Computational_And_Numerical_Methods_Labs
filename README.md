@@ -1,1 +1,1 @@
-# Computational_Ans_Numerical_Methods_Labs
+# Computational_And_Numerical_Methods_Labs
