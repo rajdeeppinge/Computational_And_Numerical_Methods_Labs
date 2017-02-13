@@ -1,0 +1,9 @@
+This is the analytical Gaussian elimination method. 
+For a system of 3 equations and 3 unkowns using elimination
+the value of one variable can be computed by systematically 
+eliminating the other variables from the 3 equations.
+Once, this value is obtained, the problem reduces to 
+2 equations in 2 variables. Which can be solved by further 
+gaussian elimination.
+
+Since this is an analytical method, it will give exact solution. 

@@ -1,0 +1,15 @@
+The splines were generated using the fact that function value and spline values must agree at the data points and the continuity
+conditions that the first and second derivatives of the function and the spline must agree at the interior points.
+
+Actual answer f(0.5) = 0.0625
+
+For the cubic case, 
+	f(0.5) = 0.3125 with natural boundary condition.
+	f(0.5) ~ 0 with clamped boundary condition.
+
+For the quadratic case,
+	f(0.5) = 0 with natural boundary condition.
+	f(0.5) = 0.3750 with clamped boundary condition.
+
+In Quadratic case, the accuracy is more with the natural boundary condition.
+In Cubic spline, the accuracy is more with the clamped boundary condition.

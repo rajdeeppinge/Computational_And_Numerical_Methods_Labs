@@ -1,0 +1,41 @@
+Q1
+
+To find f'(6.0), we use forward difference method because 6.0 is the first point and we have maximum delta values available which will give better answer
+f'(6.0) = -7.549167
+
+To find f''(6.3), we use backward difference method because 6.3 is the last point and we have maximum nabla values available which will give better answer
+f''(6.3) = -0.347100
+
+
+
+Q2
+
+step size		actual answer	method 1 approx ans		method 1 approx ans		method 1 approx ans
+h = 0.100000, fdd = 99.500000, fddapprox1 = 64.189919, fddapprox2 = -8.654803, fddapprox3 = 75.784938
+h = 0.050000, fdd = 99.500000, fddapprox1 = 88.144970, fddapprox2 = 32.629552, fddapprox3 = 96.125423
+h = 0.025000, fdd = 99.500000, fddapprox1 = 96.471161, fddapprox2 = 73.470795, fddapprox3 = 99.076725
+h = 0.012500, fdd = 99.500000, fddapprox1 = 98.730629, fddapprox2 = 90.614054, fddapprox3 = 99.483314
+h = 0.006250, fdd = 99.500000, fddapprox1 = 99.306895, fddapprox2 = 96.300793, fddapprox3 = 100.288141
+
+Here we observe that as the step size decreses the approximation gets closer to the actual answer.
+
+
+ERROR terms
+
+h = 0.100000 error1 = 35.310081, error2 = 108.154803, error3 = 23.715062
+h = 0.050000 error1 = 11.355030, error2 = 66.870448, error3 = 3.374577
+h = 0.025000 error1 = 3.028839, error2 = 26.029205, error3 = 0.423275
+h = 0.012500 error1 = 0.769371, error2 = 8.885946, error3 = 0.016686
+h = 0.006250 error1 = 0.193105, error2 = 3.199207, error3 = -0.788141
+
+As per the plotted graph, we observe that the error is less for small step sizes.
+
+
+Observation
+
+method 2 has the largest error as the terms used to find approximation are asymmetric while method 3 has the least error because it approximates by considering 5 terms which are spread evenly around the actual point at which the value is to be found out.
+
+
+What will happen  when  we add more  and more nodes?
+If we add more node in the approximating equation, the approximation will be based on more data present around given node which will give better approximation.
+

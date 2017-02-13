@@ -1,0 +1,9 @@
+This program is the implementation of the generalized Newton's method to solve a system of equations. We have a 
+system of two equation in 2 variables x,y. 
+
+We manually calculated the 2*2 jacobian and its inverse. It was simple since the dimension was small, in general
+it will need a code for matrix multiplication which is not trivial to implement. The iteration rule is
+to update vector by subtracting the multiplication of inverse jacobian and the vector of function values. We have
+split this implementation in x and y since we have only 2 variables.  
+
+Result : x = 2.000002 and y = 0.999998. This is for 4 iterations. For futher iteration x and y converge to 2.

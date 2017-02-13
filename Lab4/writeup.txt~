@@ -1,0 +1,21 @@
+q1. We have written this programme in Matlab
+
+Here we approximate the exponential function by a fourth order polynomial.
+For the given range the polynomial very nearly approximates the exponential function.
+
+The range of error is approximately 1e-3
+
+When we increase the range from -5 to 5 we can see the huge error in approximation which implies that the interpolation is done for the localized functions.
+
+The comparison between the two approximating polynomial Lagrange and Taylor shows that the Lagrange polynomial gives more accurate answer over the given range.
+In case of Taylor polynomial, the answer is very close in the range [-0.5,0.5] but deviates outside that bound.
+
+
+q2. We have written this programme in C
+
+We have values of X and y(X)
+We find the first, second and third divided difference for the given values.
+We put these values in the divided difference polynomial to find the value of P(1.65).
+
+Check: We also checked the value of P(1.65) by taking the midpoint of P(1.6) and P(1.8) i.e. P(1.7) and then taking midpoint of P(1.7) and P(1.6)
+Both this value and the actual answer are very close indicating the correctness of method

@@ -1,0 +1,12 @@
+Write-up
+
+Newton-Raphson method
+This method takes 6 iterations to reach within epsilon(1e-6) distance of the root.
+
+Secant method
+This method takes 7 iterations to reach within epsilon(1e-6) distance of the root. As we know, the rate of convergence of the secant method is less than the Newton's method(1.618 against 2) This extra step is justified.
+
+The New method
+This method is even faster than the Newton's method. It takes only 4 step to reach the root when starting point is 1.
+But there is an ambiguity. This method is highly unreliable and depends on the initial point for its rate of convergence.
+When the initial point = 0, the method takes 156 iterations!

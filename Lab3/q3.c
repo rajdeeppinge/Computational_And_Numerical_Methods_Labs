@@ -1,0 +1,41 @@
+/*
+Program to find a solution to system of equations using Gaussian elemination method.
+
+
+*/
+# include <stdio.h>
+
+
+
+
+int main()
+{
+	double a[3][3]= { {10,-1,2}, {1,10,-1}, {2,3,20} }; // array of coefficeints
+
+	double b[3] = {4,3,7} ; //y values
+
+	double x1,x2,x3 ;
+
+  // requirements b3_2dash , a33_2dash , b2_1dash , a23_1dash , a22_1dash 
+ double b3_2dash , a33_2dash , b2_1dash , a23_1dash , a22_1dash, a33_1dash , b3_1dash, a32_1dash;
+
+	// calculation of intermediate coefficients during the elimination
+	b2_1dash = b[1] - b[0]*a[1][0]/a[0][0];
+	a22_1dash= a[1][1] - a[1][0]*a[0][1]/a[0][0]; 
+	a23_1dash= a[1][2] - a[1][0]*a[0][2]/a[0][0]; 
+	
+	a32_1dash =a[2][1] - a[0][1]*a[2][0]/a[0][0];
+	a33_1dash= a[2][2] - a[0][2]*a[2][0]/a[0][0]; 
+	b3_1dash=  b[2] - b[0]*a[2][0]/a[0][0]; 
+	
+	a33_2dash = a33_1dash - a23_1dash* a32_1dash/a22_1dash;
+	b3_2dash = b3_1dash - b2_1dash * a32_1dash/a22_1dash ;    	 
+	
+	// calulation of x's analytically using the coefficeints calculated
+	x3= b3_2dash / a33_2dash; 
+	x2= (b2_1dash - a23_1dash*x3) / a22_1dash ; 
+	x1 = (b[0] - a[0][1]*x2 - a[0][2]*x3)/ a[0][0]; 
+
+	printf("x1=%f ,x2=%f, x3=%f \n", x1,x2,x3); // final ans
+	return 0;
+}

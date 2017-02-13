@@ -1,0 +1,5 @@
+The user defined parameters for the newton raphson method were the starting point of x and the error tolerance epsilon.
+
+When we ran the loop for a hundered times and checked with starting points as 1,-1,0.5 after a certain number of iterations namely 27,
+the given ratio became a constant because the method converges approximately to the root. The method converges very well to the root in as little as
+27 iterations and very close to the actual root so much so that the c datatype was underflowed. When we tried for x_init= 5 the method was unable to converge.  

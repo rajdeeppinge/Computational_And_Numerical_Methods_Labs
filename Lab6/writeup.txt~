@@ -1,0 +1,18 @@
+c) & d) The approximate values for the given analytic function at x=-0.25 are:
+
+
+x = -0.25
+ 
+
+	actual function value 		 		= 0.970143 		
+	piece wise quadratic interpolation  = 0.973607
+	piece wise cubic interpolation 		= 0.981694
+	divided difference interpolation 	= 0.985894
+
+
+x= 0.75
+    actual function value 		 		= 0.800000	
+	piece wise quadratic interpolation  = 0.810985 
+	piece wise cubic interpolation 		= 0.803694
+	divided difference interpolation 	= 0.068446
+

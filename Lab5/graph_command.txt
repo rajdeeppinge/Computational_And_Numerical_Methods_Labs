@@ -1,0 +1,2 @@
+plot "fx.txt" using 1:2 title "x vs fx", "fx.txt" using 1:3 title "forward difference" with points ps 2, "fx.txt" using 1:4 title "backward difference"
+

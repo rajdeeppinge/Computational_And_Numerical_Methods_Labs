@@ -1,0 +1,101 @@
+#include<stdio.h>
+#include<math.h>
+
+double h[] = {0.1, 0.05, 0.025, 0.0125, 0.00625}; // given step sizes
+	
+double fddapprox1[5], fddapprox2[5], fddapprox3[5];	// array which store the approximate value of functions for respective step sizes
+
+double x = 1;		// point at which f''(x) is to be found out
+
+
+/* function to find out the actual value of given function f(x) */
+double f(double x)
+{
+	return atan(100*x*x-199*x+100);
+}
+
+/* function to calculate actual double derivative of f i.e. f''(x)*/
+double fdd(double x)
+{
+	double t = 100*x*x-199*x+100;
+	return ( ((1+t*t)*200)-(200*x-199)*2*t*(200*x-199) )/(1+2*t*t+t*t*t*t);
+}
+
+void method1()
+{
+	int i;
+	double A, B, C;
+	for(i = 0; i < 5; i++)
+	{
+		A = ((double)1 / (h[i]*h[i]));
+		B = -2*A;
+		C = A;
+		fddapprox1[i] = A*f(x-h[i]) + B*f(x) + C*f(x+h[i]);
+	}
+}
+
+void method2()
+{
+	int i;
+	double A, B, C;
+	for(i = 0; i < 5; i++)
+	{
+		A = ((double)1 / (h[i]*h[i]));
+		B = -2*A;
+		C = A;
+		fddapprox2[i] = A*f(x+2*h[i]) + B*f(x+h[i]) + C*f(x);
+	}
+}
+
+void method3()
+{
+	int i;
+	double A,B,C,D,E;
+
+	double Arr[5][5] = {{-8.3287, 133.3147, -249.9720, 133.3147, -8.3287},
+					{-33.3147, 533.2587, -999.8881, 533.2587, -33.3147},
+					{-133.3, 2133.0, -3999.6, 2133.0, -133.3},
+					{-533, 8532, -15998, 8532, -533},
+					{-2132, 34129, -63993, 34129, -2132}};
+
+	for(i = 0; i < 5; i++)
+	{
+		A = Arr[i][0];
+		B = Arr[i][1];
+		C = Arr[i][2];
+		D = Arr[i][3]; 
+		E = Arr[i][4]; 
+		fddapprox3[i] = A*f(x-2*h[i]) + B*f(x-h[i]) + C*f(x) + D*f(x+h[i]) + E*f(x+2*h[i]);
+	}
+}
+
+int main()
+{
+	int i;
+
+	for(i = 0; i < 5; i++)
+	{
+		fddapprox1[i] = 0;
+		fddapprox2[i] = 0;
+		fddapprox3[i] = 0;
+	}
+
+	method1();
+	method2();
+	method3();
+
+	for(i = 0; i < 5; i++)
+	{
+//		printf("h = %lf, fdd = %lf\n",  h[i], fdd(x));
+//		printf("fddapprox1 = %lf, fddapprox2 = %lf, fddapprox3 = %lf\n", fddapprox1[i], fddapprox2[i], fddapprox3[i]);
+//		printf("error1 = %lf, error2 = %lf, error3 = %lf\n", fdd(x)-fddapprox1[i], fdd(x)-fddapprox2[i], fdd(x)-fddapprox3[i]);
+	}
+
+	for(i = 0; i < 5; i++)
+	{
+		printf("%lf ",  h[i]);
+		printf("%lf %lf %lf\n", fdd(x)-fddapprox1[i], fdd(x)-fddapprox2[i], fdd(x)-fddapprox3[i]);
+	}
+
+	return 0;
+}

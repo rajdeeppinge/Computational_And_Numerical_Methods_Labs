@@ -1,0 +1,23 @@
+c) & d) The approximate values for the given analytic function at x=-0.25 are:
+
+
+x = -0.25
+ 
+
+	actual function value 		 		= 0.970143 		
+	piece wise quadratic interpolation  = 0.973607
+	piece wise cubic interpolation 		= 0.981694
+	divided difference interpolation 	= 0.985894
+
+
+x= 0.75
+    actual function value 		 		= 0.800000	
+	piece wise quadratic interpolation  = 0.810985 
+	piece wise cubic interpolation 		= 0.803694
+	divided difference interpolation 	= 0.068446
+
+There is nothing to seperate between the quadratic and the cubic piecewise interpolation in the given range.
+
+Even the divided difference gives a slightly deviating approximation from the actual answer at x= 0.75.
+
+On the whole, when we plot the graphs for all the approximations along with the actual function values, We realize that the piece wise interpolations give a very close approximation. However as the actual function is quadratic, hence the piece wise quadratic gives a better answer on the entire range, while the divided difference interpolation deviates drastically towards both ends of the interval. This is interesting. We know that the forward and backward interpolations are forms of the divided difference. These deviate on the side opposite to the point chosen for the approximation. We speculate that the divided difference contains characteristics of both as we have not chosen any reference point. Hence the error has to be symmetric and hence is more at both the ends.   

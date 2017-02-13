@@ -1,0 +1,9 @@
+Observations
+
+Newton-Raphson method converges to the root in 3 iterations.
+Bisection method takes 20 iterations to converge to the root.
+This shows that Newton-Raphson method is much faster than bisection method.
+
+Another observation
+I we increase the initial interval in the bisection method to [-100, 100] then also it converges to the root
+This shows that Bisection method is globally convergent.

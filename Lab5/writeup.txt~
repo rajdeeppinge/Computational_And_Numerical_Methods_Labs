@@ -1,0 +1,21 @@
+Q1.
+	We get same value for x=0.15 by both forward and backward interpolation.
+
+Q2.
+	we find f(-0.9) by both forward and difference interpolation. The difference is 0.000001 which is negligible. This proves the case that answer is same by both the methods if the point is within the range.
+	
+
+Forward diffference for first five points
+Backward difference for last five points
+
+for x = -0.9
+	Newton's forward difference method: solution = 0.406565
+	Newton's backward difference method: solution = 0.490669
+	Actual Answer = 0.406
+Here, the forward difference method is better since x is in the range where forward difference method has been applied.
+
+for x = 0.9
+	Newton's forward difference method: solution = 2.417729
+	Newton's backward difference method: solution = 2.459620
+	Actual Answer = 2.459
+Here, the backward difference method is better since x is in the range where backward difference method has been applied.
